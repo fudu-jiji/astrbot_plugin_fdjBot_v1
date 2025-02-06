@@ -18,11 +18,11 @@ class fdjPlugin(Star):
     async def 参加预售(self, event: AstrMessageEvent):
         '''最新的活动消息''' # 描述
         user_name = event.get_sender_name()
-        yield event.plain_result(f"预售六折，并且送特典或者礼品\n预售会一期接着一期，收到预售的快递后一个周后就会出新的预售\n一直跟预售就会最便宜的价格买最全的卡\n预售链接在群公告.") # 发送一条纯文本消息
+        yield event.plain_result(f"预售六折，并且送特典或者礼品\n预售会一期接着一期，收到预售的快递后一个周后就会出新的预售\n一直跟预售就会最便宜的价格买最全的卡\n预售链接在群公告。") # 发送一条纯文本消息
     # 注册指令
     @filter.command("卡面预览")
     async def 卡面预览(self, event: AstrMessageEvent):
         '''最新的活动消息''' # 描述
         user_name = event.get_sender_name()
-        yield event.plain_result(f"'现货预览:浏览器输入 fdj.bar 密码fuduji8\n里面有所有现货的预览图和实拍图!\n预售预览: 在群文件，或者群精华消息内！如果没有就表示还没选好图\n预售的图并不是固定的,做卡的时候发现不适合的会更换图片或者是修改原图.") # 发送一条纯文本消息
+        yield event.plain_result(f"'现货预览:浏览器输入 fdj.bar 密码fuduji8\n里面有所有现货的预览图和实拍图!\n预售预览: 在群文件，或者群精华消息内！如果没有就表示还没选好图\n预售的图并不是固定的,做卡的时候发现不适合的会更换图片或者是修改原图。") # 发送一条纯文本消息
     # 注册指令
