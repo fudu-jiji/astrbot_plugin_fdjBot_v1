@@ -26,7 +26,7 @@ class fdjPlugin(Star):
         chain = [
         At(qq=event.get_sender_id()), # At 消息发送者
         Plain("现货预览:浏览器输入"), 
-        Image.fromFileSystem("img/fdj8.png"), # 从本地文件目录发送图片
+        Image.fromFileSystem("G:/WS_Code/dev/astrbot_plugin_fdjBot_v1/astrbot_plugin_fdjBot_v1/img/fdj8.png"), # 从本地文件目录发送图片
         Plain("密码fuduji8\n里面有所有现货的预览图和实拍图!\n预售预览: 在群文件，或者群精华消息内！如果没有就表示还没选好图\n预售的图并不是固定的,做卡的时候发现不适合的会更换图片或者是修改原图。")
           ]
         yield event.chain_result(chain)
