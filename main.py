@@ -31,3 +31,12 @@ class fdjPlugin(Star):
           ]
         yield event.chain_result(chain)
       #  yield event.plain_result(f"'现货预览:浏览器输入 fdj.bar 密码fuduji8\n里面有所有现货的预览图和实拍图!\n预售预览: 在群文件，或者群精华消息内！如果没有就表示还没选好图\n预售的图并不是固定的,做卡的时候发现不适合的会更换图片或者是修改原图。") # 发送一条纯文本消息
+    # 群聊事件监听
+    @event_message_type(EventMessageType.PRIVATE_MESSAGE)
+        async def on_private_message(self, event: AstrMessageEvent):
+        message_str = event.message_str # 获取消息的纯文本内容
+        yield event.plain_result("收到了一条私聊消息。")
+    @event_message_type(EventMessageType.GROUP_MESSAGE)
+        async def on_group_message(self, event: AstrMessageEvent):
+        message_str = event.message_str # 获取消息的纯文本内容
+        yield event.plain_result("收到了一条公域消息。")
