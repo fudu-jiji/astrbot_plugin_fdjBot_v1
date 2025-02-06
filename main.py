@@ -36,7 +36,3 @@ class fdjPlugin(Star):
         async def on_private_message(self, event: AstrMessageEvent):
         message_str = event.message_str # 获取消息的纯文本内容
         yield event.plain_result("收到了一条私聊消息。")
-    @event_message_type(EventMessageType.GROUP_MESSAGE)
-        async def on_group_message(self, event: AstrMessageEvent):
-        message_str = event.message_str # 获取消息的纯文本内容
-        yield event.plain_result("收到了一条公域消息。")
