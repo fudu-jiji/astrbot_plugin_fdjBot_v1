@@ -25,10 +25,9 @@ class fdjPlugin(Star):
         '''最新的活动消息''' # 描述
         chain = [
         At(qq=event.get_sender_id()), # At 消息发送者
-        Plain("来看这个图："), 
-        Image.fromURL("https://search-operate.cdn.bcebos.com/4466f881476a1ee804b4a32aee790675.gif"), # 从 URL 发送图片
-        Image.fromFileSystem("img/fdj8.fng"), # 从本地文件目录发送图片
-        Plain("这是一个图片。")
+        Plain("现货预览:浏览器输入"), 
+        Image.fromFileSystem("img/fdj8.png"), # 从本地文件目录发送图片
+        Plain("密码fuduji8\n里面有所有现货的预览图和实拍图!\n预售预览: 在群文件，或者群精华消息内！如果没有就表示还没选好图\n预售的图并不是固定的,做卡的时候发现不适合的会更换图片或者是修改原图。")
           ]
         yield event.chain_result(chain)
       #  yield event.plain_result(f"'现货预览:浏览器输入 fdj.bar 密码fuduji8\n里面有所有现货的预览图和实拍图!\n预售预览: 在群文件，或者群精华消息内！如果没有就表示还没选好图\n预售的图并不是固定的,做卡的时候发现不适合的会更换图片或者是修改原图。") # 发送一条纯文本消息
