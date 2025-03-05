@@ -19,7 +19,7 @@ class fdjPlugin(Star):
     async def 参加预售(self, event: AstrMessageEvent):
         '''最新的活动消息''' # 描述
         user_name = event.get_sender_name()
-        yield event.plain_result(f"私聊管理员参加我们的活动哦!") # 发送一条纯文本消息
+        yield event.plain_result(f"# 有序列表 私聊管理员参加我们的活动哦!") # 发送一条纯文本消息
        # yield event.plain_result(f"预售六折，并且送特典或者礼品\n预售会一期接着一期，收到预售的快递后一个周后就会出新的预售\n一直跟预售就会最便宜的价格买最全的卡\n预售链接在群公告。") # 发送一条纯文本消息
   
     # 注册指令
